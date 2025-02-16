@@ -1,0 +1,60 @@
+{
+  "name": "custom-vite-cli",
+  "version": "0.0.0",
+  "description": "command line interface personnalisée pour mes projets",
+  "main": "dist/index.js",
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "custom-vite": "./dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run build && node dist/index.js",
+    "build": "tsc",
+    "pack": "npm run build && npm pack",
+    "prettier": "prettier . --write",
+    "lint": "eslint",
+    "lint-staged": "lint-staged",
+    "prepare": "husky",
+    "version:patch": "HUSKY=0 npm version patch",
+    "version:minor": "HUSKY=0 npm version minor",
+    "version:major": "HUSKY=0 npm version major",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "vite",
+    "cli",
+    "typescript"
+  ],
+  "author": "Marc Lemoigne",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.20.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.1",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.24.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "custom-vite-cli": "file:custom-vite-cli-1.0.0.tgz"
+  }
+}

@@ -1,0 +1,26 @@
+name: release
+
+on:
+  workflow_run:
+    workflows: ["main"]
+    types:
+      - completed
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: git config --global user.name "qQsss777" && git config --global user.email "a@a.a"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
