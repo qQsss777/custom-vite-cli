@@ -1,6 +1,6 @@
 {
   "name": "custom-vite-cli",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "command line interface personnalisée pour mes projets",
   "main": "dist/index.js",
   "type": "module",
