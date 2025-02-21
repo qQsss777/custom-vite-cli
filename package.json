@@ -24,7 +24,7 @@
     "build": "tsc",
     "pack": "npm run build && npm pack",
     "prettier": "prettier . --write",
-    "lint": "eslint",
+    "lint": "eslint src/**/*",
     "lint-staged": "lint-staged",
     "prepare": "husky",
     "version:patch": "HUSKY=0 npm version patch",
