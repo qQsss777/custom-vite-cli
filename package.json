@@ -53,8 +53,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "custom-vite-cli": "file:custom-vite-cli-1.0.0.tgz"
   }
 }
