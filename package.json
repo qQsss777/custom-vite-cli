@@ -1,5 +1,5 @@
 {
-  "name": "custom-vite-cli",
+  "name": "@qqsss777/custom-vite-cli",
   "version": "2.0.1",
   "description": "command line interface personnalisée pour mes projets",
   "main": "dist/index.js",
@@ -30,7 +30,7 @@
     "version:patch": "HUSKY=0 npm version patch",
     "version:minor": "HUSKY=0 npm version minor",
     "version:major": "HUSKY=0 npm version major",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push --follow-tags"
   },
   "keywords": [
     "vite",
