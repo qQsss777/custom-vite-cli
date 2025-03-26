@@ -15,11 +15,12 @@ npm run pack
 ```
 npm install -g custom-vite-cli-1.0.0.tgz
 ```
-
+ you can also use the Github npm registry.
+ 
 - go to your deveopment directory and type in a prompt
 
 ```
 custom-vite
 ```
 
-For the moment, frontend is the default value, package are not implemented
+For the moment, frontend is the default value, package are not implemented with vite
