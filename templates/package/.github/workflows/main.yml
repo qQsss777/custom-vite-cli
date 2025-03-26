@@ -2,8 +2,7 @@ name: build
 
 on:
   push:
-    branches-ignore:
-      - 'master'
+    branches: ['*']
 
 jobs:
   build:
@@ -11,7 +10,7 @@ jobs:
     strategy:
       matrix:
         node-version: [22.x]
-
+    if: ${{ ! startsWith( github.head_ref, 'master') }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
